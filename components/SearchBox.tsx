@@ -58,7 +58,7 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => {
       cursor:pointer;
       color: #6464f5;
     }
-    display:${text.length >0 ? 'block':'none' };
+    display:${text.length >=1 ? 'block':'none' };
   `;
   const handleChange = (e) => {
     setText(e.target.value); //update for text for searching
@@ -72,9 +72,7 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => {
     }
   }
   const handleSubmit = () => {
-    console.log(text);
     refine(text); //search text
-    
   }
   const handleErase = () => {
     setText('');
