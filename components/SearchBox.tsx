@@ -31,7 +31,6 @@ const Button = styled.span`
     cursor:pointer;
     background-color: #C24E71;
   }
-  &:on-
 `;
 
 const FormContainer = styled.div`
