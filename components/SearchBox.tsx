@@ -29,7 +29,7 @@ const Button = styled.span`
   transition: all .8s;
   &:hover{
     cursor:pointer;
-    background-color: #C24E71;
+    background-color: #AF4E7F;
   }
 `;
 
