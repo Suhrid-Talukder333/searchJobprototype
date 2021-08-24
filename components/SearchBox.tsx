@@ -58,7 +58,6 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => {
       cursor:pointer;
       color: #6464f5;
     }
-    display:${text.length >=1 ? 'block':'none' };
   `;
   const handleChange = (e) => {
     setText(e.target.value); //update for text for searching
@@ -94,7 +93,7 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => {
         onKeyDown={handleKeyDown}
       >
       </Input>
-      <EraseButton onClick={handleErase}>X</EraseButton>
+      <EraseButton onClick={handleErase}>{ text.length > 0 ? 'X' : ''}</EraseButton>
       <Button onClick={handleSubmit}>Search</Button>
     </FormContainer>
   );
